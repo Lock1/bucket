@@ -1,5 +1,5 @@
-# Basic 2D Collision in C++
+# Basic 2D Collision
 **TBA** \
 Written in C++ \
-1 December 2020 \
+Original project name : BasicPhysicsEngine \
 ![Demo Collision 2D](img/collision_2d.gif)
