@@ -127,6 +127,8 @@ void pathfind(vector<vector<bool>>& map, Position& starting, Position& target) {
             Position posLeft = Position(curPos.x - 1, curPos.y);
             Position posUp = Position(curPos.x, curPos.y + 1);
             Position posDown = Position(curPos.x, curPos.y - 1);
+
+            // Calculate distance if index valid
             if (isWithinBound(curPos.x + 1, curPos.y) && not visitedmap[curPos.x + 1][curPos.y])
                 distRight = distance(target, posRight);
             if (isWithinBound(curPos.x - 1, curPos.y) && not visitedmap[curPos.x - 1][curPos.y])
@@ -136,6 +138,7 @@ void pathfind(vector<vector<bool>>& map, Position& starting, Position& target) {
             if (isWithinBound(curPos.x, curPos.y - 1) && not visitedmap[curPos.x][curPos.y - 1])
                 distDown = distance(target, posDown);
 
+            // Only add to array if distance is valid / under 1024
             vector<dstpl> arr;
             if (distRight < 1024)
                 arr.push_back(dstpl(distRight, Right));
@@ -146,6 +149,7 @@ void pathfind(vector<vector<bool>>& map, Position& starting, Position& target) {
             if (distDown < 1024)
                 arr.push_back(dstpl(distDown, Down));
 
+            // Array sorting
             for (unsigned i = 0; i < arr.size(); i++) {
                 for (unsigned j = i + 1; j < arr.size(); j++) {
                     if (arr[i].dist < arr[j].dist) {
@@ -157,6 +161,7 @@ void pathfind(vector<vector<bool>>& map, Position& starting, Position& target) {
                 }
             }
             // printf("%d   |  %d   >>>>  ", curPos.x, curPos.y);
+            // Inserting array value to branch
             for (unsigned i = 0; i < arr.size(); i++) {
                 // printf("%lf ", arr[i].dist);
                 // std::this_thread::sleep_for(std::chrono::milliseconds(100));

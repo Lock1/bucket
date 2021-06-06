@@ -8,6 +8,7 @@
 #include <Windows.h>
 #include <iostream>
 #include <vector>
+#include "general_timer_util.hpp"
 
 // Color macro
 #define COLOR_DARK_BLUE 0x1
@@ -73,12 +74,5 @@ public:
     }
 };
 
-
-class Utility {
-public:
-    static void sleep_thread_millisecond(unsigned long duration) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(duration));
-    }
-};
 
 #endif
