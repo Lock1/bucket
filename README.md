@@ -1,6 +1,6 @@
 # bucket
-Personal small project repository \
-**TBA** \
+Personal small project repository
+
 Console
 Project                 | Date Created
 ----------------------- | ---------------
@@ -10,3 +10,4 @@ Tap Counter             | 24 March 2021
 Simple Pathfinding      | 29 March 2021
 Conway's Game of Life   | 29 March 2021
 Simple Quadratic Bezier | 6 June 2021
+Simple Miller-Rabin     | 12 February 2023
