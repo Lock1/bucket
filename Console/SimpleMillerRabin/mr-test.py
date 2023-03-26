@@ -12,3 +12,4 @@ def sprp(a, n):
     d = (n-1) >> s
     return pow(a, d, n) == 1 or any([pow(a, d*(1 << r), n) == n-1 for r in range(s)])
 
+sprp(2, 221)
