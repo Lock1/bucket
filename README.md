@@ -1,6 +1,8 @@
 # bucket
 Personal small project repository
 
+I'll put some random things here occasionally
+
 Console
 Project                 | Date Created
 ----------------------- | ---------------
